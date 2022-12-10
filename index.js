@@ -51,7 +51,7 @@ const questions = () => {
             type: "checkbox",
             name: "license",
             message: "What license did you use?",
-            choices: ["MIT License", "Apache License v2.0", "GNU General Public License v3.0", "CZ Zero License", "Unilicense", "Unlicensed"],
+            choices: ["MIT License", "Apache License v2.0", "GNU General Public License v3.0", "Mozilla Public License 2.0"]
         },
         {
             type: "input",
