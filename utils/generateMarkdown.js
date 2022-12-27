@@ -94,26 +94,22 @@ function generateMarkdown(data) {
   return `# ${data.title}
   <a name="readme-top"></a>
 
+  
   ## <details><summary>Table of Contents</summary><br/>
-
   - [Title](#title)
   - [About the Project](#About-the-Project)
-    - [Built With](##Built-With)
-    - [Visuals](##Visuals)
+    - [Built With](#Built-With)
+    - [Visuals](#Visuals)
   - [Access](#Access)
   - [Getting Started](#Getting-Started)
-    - [Installation](##installation)
-    - [Testing](##test)
+    - [Installation](#installation)
+    - [Testing](#test)
   - [Usage](#Usage)
   - [License](#License)
   - [Contributions](#Contributions)
   - [Contact](#Contact)
   - [Resources](#Resources)
-
-
 </details>
-
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -127,12 +123,12 @@ function generateMarkdown(data) {
 
     ${renderLanguageBadge(data.badges)}
 
-
+    
     ### Visuals
   
       (Link your visuals here)
 
-  <p align="left">(<a href="#readme-top">back to top</a>)</p>
+  <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Access
@@ -142,7 +138,7 @@ function generateMarkdown(data) {
 
   ### Here is the link to the deployed application ${data.URL}
   
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Getting Started
@@ -158,35 +154,35 @@ function generateMarkdown(data) {
 
   ${data.tests}
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Usage
 
   ${data.usage}
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Contributors
 
   ${data.contributors}
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Contact
 
   If you would like to contact me with suggestions or would like to collaborate on a project feel free to contact me at # ${data.email}
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Resources
 
   Here is a list of the resources that I used for the project # ${data.resources}
 
-<p align="left">(<a href="#readme-top">back to top</a>)</p>
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 `;
 }
