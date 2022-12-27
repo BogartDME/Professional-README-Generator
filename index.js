@@ -9,7 +9,7 @@ const questions = () => {
         {
             type: "input",
             name:"name",
-            message:"What is your name",
+            message:"What is your full name",
         },
         {
             type: "input",
@@ -33,7 +33,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name:"languages",
+            name:"usage",
             message:"How can this app be used?",
         },
         {
@@ -45,7 +45,7 @@ const questions = () => {
             type: "checkbox",
             name:"languages",
             message:"What languages did you use to build your app?",
-            choices:["CSS", "HTML", "Javascript", "React", "Java", "SQL", "Python", "C++", "Ruby", "Swift", "PHP"]
+            choices:["CSS", "HTML", "Bootstrap", "Tailwind", "Node.js", "Javascript", "React", "Java", "Ruby", "Python", "C++", "Swift"]
         },
         {
             type: "checkbox",
