@@ -39,14 +39,14 @@ function renderLicenseLink(license){
 function renderLicenseFinal(license) {
   let generateLicense = ``; 
   for (i = 0; i < license.length; i++) {
-    generateLicense += `${renderLicenseFinal(license[i])} ${renderLicenseLink[i]}` 
+    generateLicense += `${renderLicenseBadge(license[i])} ${renderLicenseLink[i]}` 
   } 
-  return generateBadge;
+  return generateLicense;
 };
 
 
 //Create function that returns the language badge
-function renderLanguageBadge(language) {
+function pickLanguageBadge(language) {
   switch(language){
     case "CSS":
       return "![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)";
@@ -84,7 +84,7 @@ function renderLanguageBadge(language) {
 function renderLanguageSection(language) {
   let generateLanguage = ``; 
   for (i = 0; i < language.length; i++) {
-    generateLanguage += `${renderLanguageBadge(language[i])}` 
+    generateLanguage += `${pickLanguageBadge(language[i])}` 
   } 
   return generateLanguage;
 };
@@ -96,7 +96,7 @@ function generateMarkdown(data) {
 
   
   ## <details><summary>Table of Contents</summary><br/>
-  - [Title - Link](#title)
+  - [Title](#title)
   - [About the Project](#about-the-Project)
     - [Built With](#built-with)
     - [Visuals](#visuals)
@@ -121,7 +121,7 @@ function generateMarkdown(data) {
 
   ### Built With 
 
-    ${renderLanguageBadge(data.badges)}
+    ${pickLanguageBadge(data.language)}
 
     
     ### Visuals
@@ -162,6 +162,12 @@ function generateMarkdown(data) {
   ${data.usage}
 
 <p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
+
+##License
+
+${renderLicenseFinal(data.license)}
+
 
 
 ## Contributors
