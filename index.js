@@ -28,8 +28,18 @@ const questions = () => {
         },
         {
             type: "input",
-            name:"project description",
-            message:"Describe your project:",
+            name: "URL",
+            message: "Please post the deployed URL"
+        },
+        {
+            type: "input",
+            name: "repo",
+            message: "Please post the link to your repo"
+        },
+        {
+            type: "input",
+            name:"about",
+            message:"Tell me about your project:",
         },
         {
             type: "input",
@@ -40,6 +50,11 @@ const questions = () => {
             type: "input",
             name:"requirements",
             message:"What are your instructions for installation?",
+        },
+        {
+            type: "input",
+            name: "resources",
+            message: "Please post the resources you would like to cite:"
         },
         {
             type: "checkbox",
@@ -70,7 +85,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name:"Usage",
+            name:"usage",
             message:"How can this app be used?",
         }
     ])
@@ -83,7 +98,7 @@ const questions = () => {
 // TODO: Create a function to write README file
 function writeToFile(data) {
 fs.writeFile('./dist/README.md', generateMarkdown(data), (err) =>
-err ? console.error(err) : console.log('Readme file created successfuly!'));
+err ? console.error(err) : console.log('Readme file created successfuly, check the dist folder!'));
 }
 
 

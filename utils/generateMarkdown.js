@@ -36,12 +36,12 @@ function renderLicenseLink(license){
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseFinal(license) {
   let generateLicense = ``; 
   for (i = 0; i < license.length; i++) {
-    generateLicense += `${renderLicenseBadge(license[i])} ${renderLicenseLink[i]}` 
+    generateLicense += `${renderLicenseFinal(license[i])} ${renderLicenseLink[i]}` 
   } 
-  return generateLicense;
+  return generateBadge;
 };
 
 
@@ -62,6 +62,8 @@ function renderLanguageBadge(language) {
         return "![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)";
     case "React":
         return "![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)";    
+    case "Jquery":
+      return "![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)";
     case "Java":
       return "![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)";
     case "Ruby":
@@ -72,12 +74,119 @@ function renderLanguageBadge(language) {
       return "![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)";
     case "Swift":
       return "![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)";
+    default:
+      return ""
     }
 }
+
+// TODO: Create a function that returns the language section of README
+// If there is no language, return an empty string
+function renderLanguageSection(language) {
+  let generateLanguage = ``; 
+  for (i = 0; i < language.length; i++) {
+    generateLanguage += `${renderLanguageBadge(language[i])}` 
+  } 
+  return generateLanguage;
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  <a name="readme-top"></a>
+
+  ## <details><summary>Table of Contents</summary><br/>
+
+  - [Title](#title)
+  - [About the Project](#About-the-Project)
+    - [Built With](##Built-With)
+    - [Visuals](##Visuals)
+  - [Access](#Access)
+  - [Getting Started](#Getting-Started)
+    - [Installation](##installation)
+    - [Testing](##test)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contributions](#Contributions)
+  - [Contact](#Contact)
+  - [Resources](#Resources)
+
+
+</details>
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## About the Project
+
+  Hi, My name is # ${data.name}, thank you for your interest in my project!
+
+  ${data.about}
+
+  ### Built With 
+
+    ${renderLanguageBadge(data.badges)}
+
+
+    ### Visuals
+  
+      (Link your visuals here)
+
+  <p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Access
+
+  ### Here is the link to the repository ${data.repo}
+
+
+  ### Here is the link to the deployed application ${data.URL}
+  
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Getting Started
+
+  Here are some some things you will need to get started:
+
+  ### Installation
+
+  ${data.requirements}
+
+
+  ### Testing
+
+  ${data.tests}
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Usage
+
+  ${data.usage}
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Contributors
+
+  ${data.contributors}
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Contact
+
+  If you would like to contact me with suggestions or would like to collaborate on a project feel free to contact me at # ${data.email}
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Resources
+
+  Here is a list of the resources that I used for the project # ${data.resources}
+
+<p align="left">(<a href="#readme-top">back to top</a>)</p>
 
 `;
 }
