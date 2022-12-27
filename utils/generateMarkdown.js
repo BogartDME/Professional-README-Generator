@@ -96,19 +96,19 @@ function generateMarkdown(data) {
 
   
   ## <details><summary>Table of Contents</summary><br/>
-  - [Title](#title)
-  - [About the Project](#About-the-Project)
-    - [Built With](#Built-With)
-    - [Visuals](#Visuals)
-  - [Access](#Access)
-  - [Getting Started](#Getting-Started)
+  - [Title - Link](#title)
+  - [About the Project](#about-the-Project)
+    - [Built With](#built-with)
+    - [Visuals](#visuals)
+  - [Access](#access)
+  - [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Testing](#test)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contributions](#Contributions)
-  - [Contact](#Contact)
-  - [Resources](#Resources)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributions](#contributions)
+  - [Contact](#contact)
+  - [Resources](#resources)
 </details>
 
 
