@@ -6,15 +6,15 @@ function renderLicenseBadge(license){
     case "MIT License":
       return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
     case "Apache License v2.0":
-      return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]";
+      return "[![License: Apache License v2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]";
     case "GNU General Public License v3.0":
       return "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]";
     case "Mozilla Public License 2.0":
       return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]"
     default: 
-      return " ";
+      return " "
   }
-};
+}
 
 
 // TODO: Create a function that returns the license link
@@ -30,24 +30,25 @@ function renderLicenseLink(license){
     case "Mozilla Public License 2.0":
       return "(https://opensource.org/licenses/MPL-2.0)";
     default:
-      return " "; 
+      return " " 
   }
-};
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseFinal(license) {
   let generateLicense = ``; 
   for (i = 0; i < license.length; i++) {
-    generateLicense += `${renderLicenseBadge(license[i])} ${renderLicenseLink[i]}` 
+    generateLicense +=`${renderLicenseBadge(license[i])}${renderLicenseLink(license[i])}
+    ` 
   } 
   return generateLicense;
 };
 
 
 //Create function that returns the language badge
-function pickLanguageBadge(language) {
-  switch(language){
+function pickLanguageBadge(languages) {
+  switch(languages){
     case "CSS":
       return "![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)";
     case "HTML":
@@ -75,16 +76,16 @@ function pickLanguageBadge(language) {
     case "Swift":
       return "![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)";
     default:
-      return ""
+      return " "
     }
 }
 
 // TODO: Create a function that returns the language section of README
 // If there is no language, return an empty string
-function renderLanguageSection(language) {
+function renderLanguageSection(languages) {
   let generateLanguage = ``; 
-  for (i = 0; i < language.length; i++) {
-    generateLanguage += `${pickLanguageBadge(language[i])}` 
+  for (i = 0; i < languages.length; i++) {
+    generateLanguage += `${pickLanguageBadge(languages[i])}` 
   } 
   return generateLanguage;
 };
@@ -92,11 +93,14 @@ function renderLanguageSection(language) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  <a name="readme-top"></a>
-
+  <a id="readme-top"></a>
   
-  ## <details><summary>Table of Contents</summary><br/>
+  
+  <details close> 
+  <summary> Table of Contents</summary><br/>
+  
   - [Title](#title)
+  - [License](#license)
   - [About the Project](#about-the-Project)
     - [Built With](#built-with)
     - [Visuals](#visuals)
@@ -105,13 +109,19 @@ function generateMarkdown(data) {
     - [Installation](#installation)
     - [Testing](#test)
   - [Usage](#usage)
-  - [License](#license)
   - [Contributions](#contributions)
   - [Contact](#contact)
   - [Resources](#resources)
-</details>
+  
 
+  </details>
 
+  ## License
+  
+  ${renderLicenseFinal(data.license)}
+  
+
+---
 
 ## About the Project
 
@@ -121,14 +131,19 @@ function generateMarkdown(data) {
 
   ### Built With 
 
-    ${pickLanguageBadge(data.language)}
+  ${renderLanguageSection(data.languages)}
 
     
-    ### Visuals
+  ### Visuals
   
-      (Link your visuals here)
+  
+  (Link your visuals here)
 
-  <p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
+
+---
+
+<p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Access
@@ -143,16 +158,16 @@ function generateMarkdown(data) {
 
 ## Getting Started
 
-  Here are some some things you will need to get started:
+Here are some some things you will need to get started:
 
-  ### Installation
+### Installation
 
-  ${data.requirements}
+${data.requirements}
 
 
-  ### Testing
+### Testing
 
-  ${data.tests}
+${data.tests}
 
 <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,9 +179,6 @@ function generateMarkdown(data) {
 <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 
-##License
-
-${renderLicenseFinal(data.license)}
 
 
 
@@ -179,7 +191,7 @@ ${renderLicenseFinal(data.license)}
 
 ## Contact
 
-  If you would like to contact me with suggestions or would like to collaborate on a project feel free to contact me at # ${data.email}
+  If you would like to contact me with suggestions or would like to collaborate on a project feel free to contact me at ${data.email}
 
 <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,7 +200,8 @@ ${renderLicenseFinal(data.license)}
 
   Here is a list of the resources that I used for the project # ${data.resources}
 
-<p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
+  <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
 `;
 }
