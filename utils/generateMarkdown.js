@@ -125,7 +125,7 @@ function generateMarkdown(data) {
 
 ## About the Project
 
-  Hi, My name is # ${data.name}, thank you for your interest in my project!
+  Hi, My name is ${data.name}, thank you for your interest in my project!
 
   ${data.about}
 
@@ -137,7 +137,8 @@ function generateMarkdown(data) {
   ### Visuals
   
   
-  (Link your visuals here)
+  ![Alt full site image](./)
+
 
 
 
@@ -198,7 +199,7 @@ ${data.tests}
 
 ## Resources
 
-  Here is a list of the resources that I used for the project # ${data.resources}
+  Here is a list of the resources that I used for the project ${data.resources}
 
 
   <p align="middle">(<a href="#readme-top">back to top</a>)</p>
