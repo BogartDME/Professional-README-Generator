@@ -60,7 +60,7 @@ const questions = () => {
             type: "checkbox",
             name:"languages",
             message:"What languages did you use to build your app?",
-            choices:["CSS", "HTML", "Bootstrap", "Tailwind", "Node.js", "Javascript", "React", "Java", "Ruby", "Python", "C++", "Swift"]
+            choices:["CSS", "HTML", "Bootstrap", "Tailwind", "Heroku", "Express.js", "Node.js", "Javascript", "React", "jQuery,", "MySQL", "MongoDB", "Java", "Ruby", "Python", "C++", "Swift"]
         },
         {
             type: "checkbox",
