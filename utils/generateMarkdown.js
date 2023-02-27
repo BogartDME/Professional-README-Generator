@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+//license badging
 // If there is no license, return an empty string
 
 function renderLicenseBadge(license){ 
@@ -17,7 +17,7 @@ function renderLicenseBadge(license){
 }
 
 
-// TODO: Create a function that returns the license link
+//unction that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license){
   switch(license){
@@ -34,7 +34,7 @@ function renderLicenseLink(license){
   }
 }
 
-// TODO: Create a function that returns the license section of README
+//function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseFinal(license) {
   let generateLicense = ``; 
@@ -88,7 +88,7 @@ function pickLanguageBadge(languages) {
     }
 }
 
-// TODO: Create a function that returns the language section of README
+//eturn the language section of README
 // If there is no language, return an empty string
 function renderLanguageSection(languages) {
   let generateLanguage = ``; 
@@ -98,7 +98,7 @@ function renderLanguageSection(languages) {
   return generateLanguage;
 };
 
-// TODO: Create a function to generate markdown for README
+//generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
   <a id="readme-top"></a>
@@ -133,7 +133,7 @@ function generateMarkdown(data) {
 
 ## About the Project
 
-  Hi, My name is ${data.name}, thank you for your interest in my project!
+  Hi, my name is ${data.name}, thank you for your interest in my project!
 
   ${data.about}
 
@@ -157,12 +157,12 @@ function generateMarkdown(data) {
 
 ## Access
 
-  ### Here is the link to the repository ${data.repo}
+  ### You can find my repository [HERE](${data.repo})
 
 
-  ### Here is the link to the deployed application ${data.URL}
+  ### [HERE](${data.URL}) is the link to the deployed application
   
-<p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Getting Started
@@ -178,14 +178,14 @@ ${data.requirements}
 
 ${data.tests}
 
-<p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Usage
 
   ${data.usage}
 
-<p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
@@ -195,14 +195,16 @@ ${data.tests}
 
   ${data.contributors}
 
-<p align="middle">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Contact
 
   If you would like to contact me with suggestions or would like to collaborate on a project feel free to contact me at ${data.email}
 
-<p align="middle">(<a href="#readme-top">back to top</a>)</p>
+  Also please feel free to check out my Github to see other apps I have worked on: [${data.gitusername}](${data.github})
+
+
 
 
 ## Resources

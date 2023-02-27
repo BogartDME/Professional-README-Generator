@@ -18,8 +18,13 @@ const questions = () => {
         },
         {
             type: "input",
-            name:"github",
+            name:"gitusername",
             message:"What is your github user name?",
+        },
+        {
+            type: "input",
+            name:"github",
+            message:"Please post a link to your github",
         },
         {
             type: "input",
