@@ -23,11 +23,6 @@ const questions = () => {
         },
         {
             type: "input",
-            name:"github",
-            message:"Please post a link to your github",
-        },
-        {
-            type: "input",
             name:"title",
             message:"What is the name of your project?",
         },

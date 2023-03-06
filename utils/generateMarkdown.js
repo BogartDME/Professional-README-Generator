@@ -202,7 +202,7 @@ ${data.tests}
 
   If you would like to contact me with suggestions or would like to collaborate on a project feel free to contact me at ${data.email}
 
-  Also please feel free to check out my Github to see other apps I have worked on: [${data.gitusername}](${data.github})
+  Also please feel free to check out my Github to see other apps I have worked on: [${data.gitusername}](https://github.com/(${data.gitusername})
 
 
 
