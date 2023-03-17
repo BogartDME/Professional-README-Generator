@@ -88,7 +88,7 @@ function pickLanguageBadge(languages) {
     }
 }
 
-//eturn the language section of README
+//return the language section of README
 // If there is no language, return an empty string
 function renderLanguageSection(languages) {
   let generateLanguage = ``; 
@@ -102,8 +102,9 @@ function renderLanguageSection(languages) {
 function generateMarkdown(data) {
   return `# ${data.title}
   <a id="readme-top"></a>
-  
-  
+ 
+
+
   <details close> 
   <summary> Table of Contents</summary><br/>
   
@@ -129,7 +130,7 @@ function generateMarkdown(data) {
   ${renderLicenseFinal(data.license)}
   
 
----
+  ![underline CR](https://capsule-render.vercel.app/api?type=rect&color=20:3A3E5B,45:AF3E4D,90:193E3D&height=2.5)
 
 ## About the Project
 
@@ -150,7 +151,7 @@ function generateMarkdown(data) {
 
 
 
----
+  ![underline CR](https://capsule-render.vercel.app/api?type=rect&color=0:AF3E4D,20:193E3D,80:3A3E5B&height=2.5)
 
 <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,7 +215,11 @@ ${data.tests}
 
   <p align="middle">(<a href="#readme-top">back to top</a>)</p>
 
+
+  ![footer CR](https://capsule-render.vercel.app/api?type=waving&color=20:3A3E5B,45:AF3E4D,90:19353D&height=80&section=footer)
 `;
+
+
 }
 
 module.exports = generateMarkdown;
